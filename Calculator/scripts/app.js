@@ -24,16 +24,23 @@ $(document).ready(function() {
   })
 
   $("#eval").on("click", function() {
-    alert("Equals!");
+    //alert("Equals!");
+    values.push(disp.val());
+    calculate(values);
   });
 
 
-  function clearDisplay() {
+  $(".btn1").on("click", function() {
+    values.push(disp.val());
+    values.push($(this).text());
     disp.val("");
-  }
+  })
 
   function calculate(val) {
-    return eval(val);
+    //alert(eval(val.join("")));
+    disp.val("");
+    var txt = eval(val.join("")).toString();
+    return txt;
   }
 
 });
