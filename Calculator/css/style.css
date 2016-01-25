@@ -1,71 +1,69 @@
 body {
-  padding: 10px;
-  text-align:center;
+  font-family: Ubuntu;
   margin: 0 auto;
-  background: rgba(245,250,250, .95);
+  background-image: -moz-radial-gradient(center, circle closest-corner, #4588D0 0%, #000 90%);
+  background-image: -webkit-radial-gradient(center, circle closest-corner, #4588D0 0%, #000 90%);
 }
 
-h1 {
-  font-size: 3.5em;
-  font-family: 'Kaushan Script', sans-serif;
-  text-shadow: -2px .5px .5px rgba(125,120,255,.8);
-}
-
-.button {
-  position: relative;
-  vertical-align: middle;
-  padding: 10px 30px;
-  margin: 0px 10px 15px 0px;
-  border-radius: 12px;
-  font-family: 'Lobster';
-  font-size: 25px;
-  color: #FFF;
+h1{
+  text-align: center;
   text-decoration: none;
+  font-size: 2.5em;
+  font-family: Ubuntu;
+  color: #fef
 }
 
-.generate {
-  background-color: #7488DC;
-  border-bottom: 5px solid #9980B9;
-  text-shadow: 0px -2px #8990C9;
-}
-
-.twitter {
-  background-color: #3484DC;
-  border-bottom: 5px solid #2580BF;
-  text-shadow: 0px -2px #2960C9;
-}
-
-.textBox {
-  font-size: 1.5em;
-  width: 575px;
+.calculatorBox {
+  font-size: 1.25em;
+  width: 240px;
   height: auto;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
+  margin: 3% auto;
+  background-color: #dfdfdf;
   border-radius: 12px;
-  border-left: 1px solid #999;
-  box-shadow: -10px 8px 20px rgba(75,100,200,.5);;
+  border-left: 1px solid #fff;
+  border-bottom: 2px solid #aaa;
+  box-shadow: 0 5px 12px 8px rgba(155, 180, 255, .55);
 }
 
-.animate {
-  transition: all 0.1s;
-  -webkit-transition: all 0.1s;
+.display {
+  color: #FFF;
+  font-size: 1.25em;
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  padding-right: 5px;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  background-color: #909090;
+  text-align:right;
+  -webkit-box-shadow:inset 0 0 8px #333,
+  inset 0 1px 1px #0A0B0D;
 }
 
-#quote {
-  font-family: "Garamond";
+.btn {
+  font-size: 1.3em;
+  margin: 0 0 5px 3px;
+  border-radius: 10px;
+  width: 45px;
+  height: 45px;
 }
 
-#author {
-  font-family: 'Lobster';
+.btn1 {
+  color: #EAEBED;
+  background-color: #888;
 }
 
-.button:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  border-bottom: 1px solid;
+.btn2 {
+  color: #FEF;
+  background-color: #394595;
 }
 
-.button:focus {
-  outline: 0;
+.highlight {
+  color: #000;
+  background-color: #EFE;
+}
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none;
 }
