@@ -7,28 +7,41 @@ $(document).ready(function() {
     if($("#disp").val().length <= 15) {
       $("#disp").val($("#disp").val() + $(this).text());
     }
+  });
+
+  $("button").on("click", function() {
     $(".highlight").removeClass("highlight");
     $(this).addClass("highlight");
   });
   $("#add").on("click", function() {
-    values.push(disp.val());
+    values.push("+");
     clearDisplay();
   });
   $("#minus").on("click", function() {
-    values.push(disp.val());
+    values.push("-");
     clearDisplay();
   });
 
   $("#clear").on("click", function() {
-    clearDisplay();
+    disp.val("");
+    values = [];
   })
 
   $("#eval").on("click", function() {
-    //alert("Equals!");
     values.push(disp.val());
-    calculate(values);
+    if(values.length > 2) {
+      disp.val("txt");
+      var txt = eval(val.join("")).toString();
+      alert(txt);
+    }
+    alert(values);
+    values = [];
   });
 
+  $("#negpos").on("click", function() {
+    //values.push(disp.val()*-1);
+    $("#disp").val("Hef");
+  });
 
   $(".btn1").on("click", function() {
     values.push(disp.val());
@@ -36,11 +49,7 @@ $(document).ready(function() {
     disp.val("");
   })
 
-  function calculate(val) {
-    //alert(eval(val.join("")));
-    disp.val("");
-    var txt = eval(val.join("")).toString();
-    return txt;
+  function clearDisplay() {
+    disp.val("0");
   }
-
 });
