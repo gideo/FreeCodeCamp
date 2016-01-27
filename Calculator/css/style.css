@@ -54,14 +54,20 @@ h1{
   background-color: #888;
 }
 
+
+.etc, .num, .equal {
+  color: #FEF;
+}
 .etc {
-  color: #FAEBED;
   background-color: #A32;
 }
 
 .num {
-  color: #FEF;
   background-color: #394595;
+}
+
+.equal {
+  background-color: #BBA;
 }
 
 .highlight {

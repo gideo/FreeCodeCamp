@@ -9,31 +9,16 @@ $(document).ready(function() {
 
   //jQuery event handlers
   $(".num").on("click", function() {
-    //alert($(this).text());
     if(disp.val() == 0) { disp.val("")}
     if(disp.val().length <= 15) {
       disp.val(disp.val() + $(this).val());
     }
   });
 
+  //Highlight
   $("button").on("click", function() {
     $(".highlight").removeClass("highlight");
     $(this).addClass("highlight");
-  });
-
-  $("#divide").on("click", function() {
-    values.push("/");
-    clearDisplay();
-  })
-
-  $("#add").on("click", function() {
-    values.push("+");
-    clearDisplay();
-  });
-
-  $("#minus").on("click", function() {
-    values.push("-");
-    clearDisplay();
   });
 
   $("#clear").on("click", function() {
@@ -67,7 +52,7 @@ $(document).ready(function() {
     $("#disp").val(disp.val() * -1);
   });
 
-  $(".btn1").on("click", function() {
+  $(".operator").on("click", function() {
     values.push(disp.val());
     values.push($(this).text());
     disp.val("");
