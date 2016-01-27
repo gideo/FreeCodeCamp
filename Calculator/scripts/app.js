@@ -11,8 +11,8 @@ $(document).ready(function() {
   $(".num").on("click", function() {
     //alert($(this).text());
     if(disp.val() == 0) { disp.val("")}
-    if($("#disp").val().length <= 15) {
-      $("#disp").val($("#disp").val() + $(this).val());
+    if(disp.val().length <= 15) {
+      disp.val(disp.val() + $(this).val());
     }
   });
 
@@ -34,10 +34,20 @@ $(document).ready(function() {
     values = [];
   })
 
+  $("#clean").on("click", function() {
+    disp.val("");
+  });
+
+  $("#decimal").on("click", function() {
+    if(disp.val().length <= 15 && disp.val().indexOf(".") === -1) {
+      disp.val(disp.val() + ".");
+    }
+  })
+
   $("#eval").on("click", function() {
     values.push(disp.val());
     if(values.length > 2) {
-      disp.val("txt");
+      disp.val("");
       var txt = eval(val.join("")).toString();
       alert(txt);
     }
