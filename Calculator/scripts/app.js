@@ -2,10 +2,17 @@ $(document).ready(function() {
   var values = [], str = "";
   var disp = $("#disp");
 
+  //Functions
+  function clearDisplay() {
+    disp.val("0");
+  }
+
+  //jQuery event handlers
   $(".num").on("click", function() {
     //alert($(this).text());
+    if(disp.val() == 0) { disp.val("")}
     if($("#disp").val().length <= 15) {
-      $("#disp").val($("#disp").val() + $(this).text());
+      $("#disp").val($("#disp").val() + $(this).val());
     }
   });
 
@@ -40,7 +47,7 @@ $(document).ready(function() {
 
   $("#negpos").on("click", function() {
     //values.push(disp.val()*-1);
-    $("#disp").val("Hef");
+    $("#disp").val(disp.val() * -1);
   });
 
   $(".btn1").on("click", function() {
@@ -48,8 +55,4 @@ $(document).ready(function() {
     values.push($(this).text());
     disp.val("");
   })
-
-  function clearDisplay() {
-    disp.val("0");
-  }
 });
