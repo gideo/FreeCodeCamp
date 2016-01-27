@@ -20,10 +20,17 @@ $(document).ready(function() {
     $(".highlight").removeClass("highlight");
     $(this).addClass("highlight");
   });
+
+  $("#divide").on("click", function() {
+    values.push("/");
+    clearDisplay();
+  })
+
   $("#add").on("click", function() {
     values.push("+");
     clearDisplay();
   });
+
   $("#minus").on("click", function() {
     values.push("-");
     clearDisplay();
