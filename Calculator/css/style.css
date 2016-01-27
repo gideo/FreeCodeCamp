@@ -49,25 +49,24 @@ h1{
   height: 45px;
 }
 
-.operator {
-  color: #EAEBED;
-  background-color: #888;
-}
-
-
-.etc, .num, .equal {
+.operator, .etc, .num, .equal {
   color: #FEF;
 }
+
+.operator {
+  background-color: #789;
+}
+
 .etc {
   background-color: #A32;
 }
 
 .num {
-  background-color: #394595;
+  background-color: #449;
 }
 
 .equal {
-  background-color: #BBA;
+  background-color: #282;
 }
 
 .highlight {

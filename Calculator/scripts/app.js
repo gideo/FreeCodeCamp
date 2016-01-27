@@ -21,6 +21,26 @@ $(document).ready(function() {
     $(this).addClass("highlight");
   });
 
+//   $("#operator").on("click", function() {
+//     values.push($(this).val())
+//     alert($(this))
+//   })
+
+//   $("#divide").on("click", function() {
+//     values.push("/");
+//     clearDisplay();
+//   })
+
+//   $("#add").on("click", function() {
+//     values.push("+");
+//     clearDisplay();
+//   });
+
+//   $("#minus").on("click", function() {
+//     values.push("-");
+//     clearDisplay();
+//   });
+
   $("#clear").on("click", function() {
     disp.val("");
     values = [];
