@@ -60,16 +60,6 @@ h1{
   height: 45px;
 }
 
-.check {
-  font-size: 1.8em;
-  margin: 0 auto;
-  padding: 15px;
-  border-radius: 10px;
-  width: 45px;
-  height: 45px;
-  background-color: white;
-}
-
 #id {
   text-align: center;
 }
