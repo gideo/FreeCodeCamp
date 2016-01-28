@@ -21,26 +21,6 @@ $(document).ready(function() {
     $(this).addClass("highlight");
   });
 
-//   $("#operator").on("click", function() {
-//     values.push($(this).val())
-//     alert($(this))
-//   })
-
-//   $("#divide").on("click", function() {
-//     values.push("/");
-//     clearDisplay();
-//   })
-
-//   $("#add").on("click", function() {
-//     values.push("+");
-//     clearDisplay();
-//   });
-
-//   $("#minus").on("click", function() {
-//     values.push("-");
-//     clearDisplay();
-//   });
-
   $("#clear").on("click", function() {
     disp.val("");
     values = [];
@@ -73,7 +53,11 @@ $(document).ready(function() {
 
   $(".operator").on("click", function() {
     values.push(disp.val());
-    values.push($(this).text());
+    values.push($(this).val());
     disp.val("");
+  })
+
+  $("#check").on("click", function() {
+    alert(values);
   })
 });
