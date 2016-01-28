@@ -22,12 +22,12 @@ $(document).ready(function() {
   });
 
   $("#clear").on("click", function() {
-    disp.val("");
+    disp.val("0");
     values = [];
   })
 
   $("#clean").on("click", function() {
-    disp.val("");
+    disp.val("0");
   });
 
   $("#decimal").on("click", function() {

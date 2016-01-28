@@ -1,30 +1,47 @@
-<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-<h1> Cal - #2 </h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> FCC - Calculator </title>
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
 
-<div class="container calculatorBox">
-  <input type="display" id="disp" class="display" maxlength="15" value="0">
-  <button id="clear" class="btn etc" >Ac</button>
-  <button id="clean" class="btn etc">C</button>
-  <button id="sign" class="btn etc">±</button>
-  <button class="btn operator"value="%">%</button>
+	<body>
+		<h1> Calc-Test </h1>
+		<div class="container"><a id="check" class="check">Ck</a></div>
+		<div class="container calculatorBox">
+		  <input type="display" id="disp" class="display" maxlength="15" value="0">
+		  <button id="clear" class="btn etc" >Ac</button>
+		  <button id="clean" class="btn etc">C</button>
+		  <button id="sign" class="btn etc">±</button>
+		  <button id = "operator"class="btn operator"value="%">%</button>
 
-  <button class="btn num" value="7">7</button>
-  <button class="btn num" value="8">8</button>
-  <button class="btn num" value="9">9</button>
-  <button class="btn operator"value="÷">÷</button>
+		  <button class="btn num" value="7">7</button>
+		  <button class="btn num" value="8">8</button>
+		  <button class="btn num" value="9">9</button>
+		  <button id = "operator"class="btn operator"value="÷">÷</button>
 
-  <button class="btn num" value="4">4</button>
-  <button class="btn num" value="5">5</button>
-  <button class="btn num" value="6">6</button>
-  <button class="btn operator"value="*">x</button>
+		  <button class="btn num" value="4">4</button>
+		  <button class="btn num" value="5">5</button>
+		  <button class="btn num" value="6">6</button>
+		  <button id = "operator"class="btn operator"value="*">x</button>
 
-  <button class="btn num" value="1">1</button>
-  <button class="btn num" value="2">2</button>
-  <button class="btn num" value="3">3</button>
-  <button class="btn operator"value="-">-</button>
+		  <button class="btn num" value="1">1</button>
+		  <button class="btn num" value="2">2</button>
+		  <button class="btn num" value="3">3</button>
+		  <button id = "operator"class="btn operator"value="-">-</button>
 
-  <button class="btn num" value="0">0</button>
-  <button id="decimal" class="btn num">.</button>
-  <button id="eval" class="btn equal">=</button>
-  <button class="btn operator"value="+">+</button>
-</div>
+		  <button class="btn num" value="0">0</button>
+		  <button id="decimal" class="btn num">.</button>
+		  <button id="eval" class="btn equal">=</button>
+		  <button id = "operator"class="btn operator"value="+">+</button>
+		</div>
+
+		<script src="./scripts/app,js" rel="text/javascript"></script>
+		<script src="./scripts/jquery-2.2.0.min.js" rel="text/javascript"></script>
+	</body>
+</html>
