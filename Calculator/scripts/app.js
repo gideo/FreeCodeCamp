@@ -38,8 +38,9 @@ $(document).ready(function() {
 
   $(".equal").on("click", function() {
     values.push(disp.val());
-    var txt = eval(val.join("")).toString();
-    disp.val("");
+    var txt = eval(values.join(""));
+    disp.val(txt);
+
   });
 
   $("#sign").on("click", function() {
@@ -54,5 +55,7 @@ $(document).ready(function() {
 
   $("#check").on("click", function() {
     alert(values);
+    var x = eval(values.join(""));
+    alert(x);
   })
 });
