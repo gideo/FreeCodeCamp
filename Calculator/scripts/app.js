@@ -34,7 +34,7 @@ $(document).ready(function() {
     if(disp.val().length <= 15 && disp.val().indexOf(".") === -1) {
       disp.val(disp.val() + ".");
     }
-  })
+  });
 
   $(".equal").on("click", function() {
     values.push(disp.val());
@@ -51,11 +51,5 @@ $(document).ready(function() {
     values.push(disp.val());
     values.push($(this).val());
     disp.val("");
-  })
-
-  $("#check").on("click", function() {
-    alert(values);
-    var x = eval(values.join(""));
-    alert(x);
-  })
+  });
 });
