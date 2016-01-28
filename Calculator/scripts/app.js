@@ -36,15 +36,10 @@ $(document).ready(function() {
     }
   })
 
-  $("#eval").on("click", function() {
+  $(".equal").on("click", function() {
     values.push(disp.val());
-    if(values.length > 2) {
-      disp.val("");
-      var txt = eval(val.join("")).toString();
-      alert(txt);
-    }
-    alert(values);
-    values = [];
+    var txt = eval(val.join("")).toString();
+    disp.val("");
   });
 
   $("#sign").on("click", function() {
