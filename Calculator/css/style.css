@@ -1,17 +1,23 @@
 body {
-  font-family: Ubuntu;
+  font-size: 100%;
+  font-family: 'Ubuntu' sans-serif;
   margin: 0;
   padding: 0;
   background-image: -moz-radial-gradient(center, circle closest-corner, #4588D0 0%, #000 90%);
   background-image: -webkit-radial-gradient(center, circle closest-corner, #4588D0 0%, #000 90%);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1{
   text-align: center;
   text-decoration: none;
-  font-size: 2.5em;
+  font-size: 3.5em;
   font-family: Ubuntu;
-  color: #fef
+  color: #fef;
 }
 
 .calculatorBox {
@@ -28,7 +34,7 @@ h1{
 
 .display {
   color: #FFF;
-  font-size: 1.25em;
+  font-size: 1.7em;
   width: 100%;
   height: 50px;
   border-radius: 6px;
@@ -42,7 +48,7 @@ h1{
 }
 
 .btn {
-  font-size: 1.3em;
+  font-size: 1.8em;
   margin: 0 0 5px 3px;
   border-radius: 10px;
   width: 45px;
@@ -66,7 +72,7 @@ h1{
 }
 
 .equal {
-  background-color: #282;
+  background-color: #3A3;
 }
 
 .highlight {

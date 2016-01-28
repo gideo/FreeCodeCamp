@@ -67,9 +67,8 @@ $(document).ready(function() {
     values = [];
   });
 
-  $("#negpos").on("click", function() {
-    //values.push(disp.val()*-1);
-    $("#disp").val(disp.val() * -1);
+  $("#sign").on("click", function() {
+    disp.val(disp.val() * -1);
   });
 
   $(".operator").on("click", function() {
