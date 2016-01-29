@@ -6,7 +6,9 @@ body {
   background-image: -moz-radial-gradient(center, circle closest-corner, #4588D0 0%, #000 90%);
   background-image: -webkit-radial-gradient(center, circle closest-corner, #4588D0 0%, #000 90%);
   background: url("http://i.imgur.com/4cQmbhv.jpg?1");
-  background-position: center center;
+  background-position: top;
+  background-repeat: no repeat;
+
 }
 
 * {
