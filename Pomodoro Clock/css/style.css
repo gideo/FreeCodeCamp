@@ -33,6 +33,7 @@ a {
 
 .clock {
   position: relative;
+  display: block;
   margin: 0 auto;
   width: 250px;
   height: 250px;
@@ -41,6 +42,15 @@ a {
 /*   border-radius: 50%; */
   box-shadow: 1px 1px 2px 2px #5CA9E8;
   margin-bottom: 1.6em;
+}
+
+.timer {
+  margin: 0 auto;
+  border: 1px solid #000;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  transform: translateY(50%);
 }
 
 .centerBtn {
