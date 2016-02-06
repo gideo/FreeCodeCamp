@@ -31,8 +31,3 @@ $(document).ready(function() {
         display = $("#time");
     startTimer(fiveMinutes, display);
   });
-=======
-$(document).ready(function() {
-  
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
-});
