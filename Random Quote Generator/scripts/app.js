@@ -23,12 +23,16 @@ $(document).ready(function() {
     ];
     var rand = Math.floor(Math.random() * bartlett.length);
     var quote = 'https://twitter.com/intent/tweet?text=' + '"' + bartlett[rand][1] + '" -' + bartlett[rand][0];
-    $("#quote").text(bartlett[rand][1]);
+    $("#quote").text('"' + bartlett[rand][1] + '"');
     $("#author").text(bartlett[rand][0]);
     $(".twitter-share-button").attr("href", quote);
   }
+<<<<<<< HEAD
+  
+=======
 
 
+>>>>>>> 6e4c0704aeb2b43d9aa3311324f3ace7ec99e4dc
   $(".generate").on("click", function() {
     generateQuote();
   });
