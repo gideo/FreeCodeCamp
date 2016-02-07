@@ -36,8 +36,9 @@ a {
   display: block;
   margin: 0 auto;
   width: 250px;
-  height: 250px;
+  height: 100px;
   top: 0px;
+  border-radius: 1em;
   background-color: #fff;
 /*   border-radius: 50%; */
   box-shadow: 1px 1px 2px 2px #5CA9E8;
@@ -50,12 +51,12 @@ a {
   width: 50%;
   height: auto;
   text-align: center;
-  transform: translateY(50%);
+  transform: translateY(60%);
 }
 
 #time {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .centerBtn {
