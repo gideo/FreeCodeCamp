@@ -1,11 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   background: url("https://www.dropbox.com/s/sd7gyj4v7xf1y4c/IxYAMt4.jpg?dl=1");
-=======
-  background: url("http://i.imgur.com/IxYAMt4.jpg?1");
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
   background-position: center;
   background-repeat: no repeat;
   background-size: cover;
@@ -19,24 +15,16 @@ body {
 .wrapper {
   margin: 0 auto;
   padding: 0;
-<<<<<<< HEAD
   border: 2px dotted white;
-=======
-/*   border: #F00 1px solid; */
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
 }
 
 h1 {
   text-align: center;
-<<<<<<< HEAD
   font-family: 'Lobster Two', cursive;
   font-size: 2.65em;
   padding: .5em;
   color: #5CA9E8;
   text-shadow: 1px 2px 2px #FFF;
-=======
-  padding: 1em;
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
 }
 
 a {
@@ -45,16 +33,12 @@ a {
 
 .clock {
   position: relative;
-<<<<<<< HEAD
   display: block;
-=======
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
   margin: 0 auto;
   width: 250px;
   height: 250px;
   top: 0px;
   background-color: #fff;
-<<<<<<< HEAD
 /*   border-radius: 50%; */
   box-shadow: 1px 1px 2px 2px #5CA9E8;
   margin-bottom: 1.6em;
@@ -64,9 +48,14 @@ a {
   margin: 0 auto;
   border: 1px solid #000;
   width: 50%;
-  height: 50%;
-  top: 50%;
+  height: auto;
+  text-align: center;
   transform: translateY(50%);
+}
+
+#time {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
 }
 
 .centerBtn {
@@ -100,59 +89,31 @@ a {
   -moz-animation: clock_float ease 4s infinite;
   -ms-animation: clock_float ease 4s infinite;
   animation: clock_float ease 4s infinite;
-=======
-  border-radius: 50%;
-  box-shadow: 1px 1px 2px 2px #A88;
-}
-
-.float {
-  -webkit-animation: clock_float ease 3s infinite;
-  -moz-animation: clock_float ease 3s infinite;
-  -ms-animation: clock_float ease 3s infinite;
-  animation: clock_float ease 3s infinite;
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
 }
 
 @-webkit-keyframes clock_float {
   from {transform:translate(0, 0px);}
     50% {transform:translate(0, 15px);}
-<<<<<<< HEAD
     to {transform: translate(0, 0px);    }
-=======
-    to {transform: translate(0, 0px);    } 
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
 }
 @-moz-keyframes clock_float {
   from {transform:translate(0, 0px);}
     50% {transform:translate(0, 15px);}
-<<<<<<< HEAD
     to {transform: translate(0, 0px);    }
-=======
-    to {transform: translate(0, 0px);    } 
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
 }
 @-ms-keyframes clock_float {
   from {transform:translate(0, 0px);}
     50% {transform:translate(0, 15px);}
-<<<<<<< HEAD
     to {transform: translate(0, 0px);    }
-=======
-    to {transform: translate(0, 0px);    } 
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
 }
 @keyframes clock_float {
   from {transform:translate(0, 0px);}
     50% {transform:translate(0, 15px);}
-<<<<<<< HEAD
     to {transform: translate(0, 0px);    }
-=======
-    to {transform: translate(0, 0px);    } 
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
 }
 @-webkit-keyframes clock_shadow {
   50% { margin: 0px 20% 0px 20%; opacity:.75; }
   100% { margin: 0px 0px 0px 0px; opacity:1; }
-<<<<<<< HEAD
 }
 
 
@@ -164,6 +125,3 @@ button, button:hover, button:focus, button:active, button::-moz-focus-inner {
   outline: none;
 }
 ::-moz-focus-inner { border: 0px;}
-=======
-}
->>>>>>> 1fa050955afba106cb87cfe770380f74b3f0640b
