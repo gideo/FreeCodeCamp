@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-'use strict';
-
 $(document).ready(function() {
+  var setTime = [...$("#time").text().split(":")].reduce( (a,b) => parseInt(a * 60) + parseInt(b));
   function startTimer(duration, display) {
     var start = Date.now(),
         diff,
@@ -27,7 +25,15 @@ $(document).ready(function() {
   };
 
   $(".start").on("click", function() {
-    var fiveMinutes = 60 * 5,
-        display = $("#time");
-    startTimer(fiveMinutes, display);
+    var display = $("#time");
+    startTimer(setTime, display);
   });
+
+  $(".add").on("click", function() {
+
+  });
+
+  $(".reset").on("click", function() {
+    alert(setTime);
+  });
+});
