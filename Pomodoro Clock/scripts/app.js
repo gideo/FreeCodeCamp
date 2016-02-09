@@ -1,5 +1,10 @@
 $(document).ready(function() {
   var setTime = [...$("#time").text().split(":")].reduce( (a,b) => parseInt(a * 60) + parseInt(b));
+  function alterTime() {
+    var getMinutes = (parseInt(setTime/60).toString().length < 2) ? "0" + parseInt(setTime/60): parseInt(setTime/60);
+    var getSeconds = ((setTime % 60).toString().length < 2) ? "0" + (setTime % 60): (setTime % 60);
+    $("#time").text(getMinutes + ":" + getSeconds);
+  }
   function startTimer(duration, display) {
     var start = Date.now(),
         diff,
@@ -30,10 +35,13 @@ $(document).ready(function() {
   });
 
   $(".add").on("click", function() {
-
+    setTime += 60;
+    alterTime();
   });
 
   $(".reset").on("click", function() {
+    setTime = 300;
     alert(setTime);
+    alterTime();
   });
 });
