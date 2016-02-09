@@ -35,11 +35,11 @@ a {
   position: relative;
   display: block;
   margin: 0 auto;
-  width: 250px;
+  width: 225px;
   height: 100px;
-  top: 0px;
   border-radius: 1em;
-  background-color: #fff;
+  background-color: rgba(00, 200, 255, .7);
+  opacity: .9;
 /*   border-radius: 50%; */
   box-shadow: 1px 1px 2px 2px #5CA9E8;
   margin-bottom: 1.6em;
@@ -48,6 +48,9 @@ a {
 .timer {
   margin: 0 auto;
   border: 1px solid #000;
+  background-color: #E5E4E2;
+  border-radius: 12%;
+  box-shadow: 1px 2px #555;
   width: 50%;
   height: auto;
   text-align: center;
