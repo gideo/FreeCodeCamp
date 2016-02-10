@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var intervalTimer;
   var setTime = [...$("#time").text().split(":")].reduce( (a,b) => parseInt(a * 60) + parseInt(b));
   function alterTime() {
     var getMinutes = (parseInt(setTime/60).toString().length < 2) ? "0" + parseInt(setTime/60): parseInt(setTime/60);
@@ -26,7 +27,7 @@ $(document).ready(function() {
       }
     };
     timer();
-    setInterval(timer, 1000);
+    intervalTimer = setInterval(timer, 1000);
   };
 
   $(".start").on("click", function() {
@@ -35,11 +36,13 @@ $(document).ready(function() {
   });
 
   $(".add").on("click", function() {
-    setTime += 60;
+    clearInterval(intervalTimer);
+    setTime += 30;
     alterTime();
   });
 
   $(".reset").on("click", function() {
+    clearInterval(intervalTimer);
     setTime = 300;
     alert(setTime);
     alterTime();
