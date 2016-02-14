@@ -1,11 +1,14 @@
 $(document).ready(function() { 
   var intervalTimer;
+  var audio = new Audio("https://www.dropbox.com/s/npqbf3yw7fag8e8/202029__hykenfreak__notification-chime.wav?dl=1");
   var setTime = [...$("#time").text().split(":")].reduce( (a,b) => parseInt(a * 60) + parseInt(b));
+  
   function alterTime() { 
     var getMinutes = (parseInt(setTime/60).toString().length < 2) ? "0" + parseInt(setTime/60): parseInt(setTime/60);
     var getSeconds = ((setTime % 60).toString().length < 2) ? "0" + (setTime % 60): (setTime % 60);
     $("#time").text(getMinutes + ":" + getSeconds);
   }
+  
   function startTimer(duration, display) {
     var start = Date.now(),
         diff,
@@ -23,7 +26,8 @@ $(document).ready(function() {
       display.text(minutes + ":" + seconds);
       
       if(diff <= 0) {
-        start = Date.now() + 1000;
+        audio.play();
+        clearInterval(intervalTimer);
       }
     };
     timer();
@@ -40,6 +44,7 @@ $(document).ready(function() {
     setTime += 30;
     alterTime();
   });
+  
   $(".sub").on("click", function() {
     clearInterval(intervalTimer);
     if(setTime >= 60){
@@ -47,10 +52,10 @@ $(document).ready(function() {
     }
     alterTime();
   });
+  
   $(".reset").on("click", function() {
     clearInterval(intervalTimer);
     setTime = 300;
-    alert(setTime);
     alterTime();
   });
 });
