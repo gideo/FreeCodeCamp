@@ -1,5 +1,5 @@
 $(document).ready(function() { 
-  var intervalTimer;
+  var intervalTimer, flickerTimer, blinkRepeat = 0;
   var audio = new Audio("https://www.dropbox.com/s/npqbf3yw7fag8e8/202029__hykenfreak__notification-chime.wav?dl=1");
   var setTime = [...$("#time").text().split(":")].reduce( (a,b) => parseInt(a * 60) + parseInt(b));
   
@@ -28,11 +28,21 @@ $(document).ready(function() {
       if(diff <= 0) {
         audio.play();
         clearInterval(intervalTimer);
+        flickerTimer = setInterval(flicker, 500);
       }
     };
     timer();
     intervalTimer = setInterval(timer, 1000);
   };
+  
+  function flicker() {
+    $(".timer span").toggleClass("blink");
+    if(++blinkRepeat === 7){
+      clearInterval(flickerTimer);
+      $(".timer span").removeClass("blink");
+      blinkRepeat = 0;
+    }
+  }
   
   $(".start").on("click", function() {
     var display = $("#time");
@@ -41,21 +51,21 @@ $(document).ready(function() {
   
   $(".add").on("click", function() {
     clearInterval(intervalTimer);
-    setTime += 30;
+    setTime += 60;
     alterTime();
   });
   
   $(".sub").on("click", function() {
     clearInterval(intervalTimer);
-    if(setTime >= 60){
-      setTime -= 30;  
+    if(setTime > 60){
+      setTime -= 60;  
     }
     alterTime();
   });
   
   $(".reset").on("click", function() {
     clearInterval(intervalTimer);
-    setTime = 300;
+    setTime = 1500;
     alterTime();
   });
 });

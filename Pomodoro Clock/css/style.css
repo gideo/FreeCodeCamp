@@ -96,6 +96,10 @@ a {
   animation: clock_float ease 4s infinite;
 }
 
+.blink {
+  color: #bbb !important;
+}
+
 @-webkit-keyframes clock_float {
   from {transform:translate(0, 0px);}
     50% {transform:translate(0, 15px);}
