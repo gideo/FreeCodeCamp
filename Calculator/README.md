@@ -1,5 +1,5 @@
 # Calculator #
-This calculator project for is for the FreeCodeCamp project found [here](http://www.freecodecamp.com/challenges/build-a-javascript-calculator).
+This calculator project is for the FreeCodeCamp project found [here](http://www.freecodecamp.com/challenges/build-a-javascript-calculator).
 *User Stories*
 
 1. Able to add, substract, multiply, and divide two numbers.
