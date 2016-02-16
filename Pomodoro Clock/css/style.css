@@ -1,10 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("https://www.dropbox.com/s/sd7gyj4v7xf1y4c/IxYAMt4.jpg?dl=1");
-  background-position: center;
-  background-repeat: no repeat;
-  background-size: cover;
+  background: #00d2ff;
+  background: -webkit-linear-gradient(to left, #00d2ff , #3a7bd5);
+  background: linear-gradient(to left, #00d2ff , #3a7bd5);        
 }
 
 * {
@@ -14,8 +13,20 @@ body {
 
 .wrapper {
   margin: 0 auto;
+  margin-top: 25px;
+  padding: 0 0 25px 0;
+  width: 300px;
+  background-color: rgba(225, 240, 255, .85);
+  border-radius: 1.25em;
+  box-shadow: 4px 4px 3px #318CE7;
+}
+
+.wrapper:after {
+  margin: 0 auto;
   padding: 0;
-  border: 2px dotted white;
+  width: 300px;
+  height: 300px;
+  background-color: white;
 }
 
 h1 {
@@ -24,7 +35,7 @@ h1 {
   font-size: 2.65em;
   padding: .5em;
   color: #5CA9E8;
-  text-shadow: 1px 2px 2px #FFF;
+  text-shadow: 2px 3px 1px #FFF;
 }
 
 a {
@@ -76,7 +87,7 @@ a {
   border: none;
   background: #00BFFF;
   border-radius: .5em;
-  box-shadow: 0px 3px #3F75FE;
+  box-shadow: 2px 3px #3F95FE;
 }
 
 .button:hover {
@@ -90,41 +101,30 @@ a {
 }
 
 .float {
-  -webkit-animation: clock_float ease 4s infinite;
-  -moz-animation: clock_float ease 4s infinite;
-  -ms-animation: clock_float ease 4s infinite;
-  animation: clock_float ease 4s infinite;
+  -webkit-animation: clock_float ease 5s infinite;
+  -moz-animation: clock_float ease 5s infinite;
+  animation: clock_float ease 5s infinite;
+}
+
+@-webkit-keyframes clock_float {
+  from {transform:translate(0, -6px);}
+    50% {transform:translate(0, 6px);}
+    to {transform: translate(0, -6px);}
+}
+@-moz-keyframes clock_float {
+  from {transform:translate(0, -6px);}
+    50% {transform:translate(0, 6px);}
+    to {transform: translate(0, -6px);}
+}
+@keyframes clock_float {
+  from {transform:translate(0, -6px);}
+    50% {transform:translate(0, 6px);}
+    to {transform: translate(0, -6px);}
 }
 
 .blink {
   color: #bbb !important;
 }
-
-@-webkit-keyframes clock_float {
-  from {transform:translate(0, 0px);}
-    50% {transform:translate(0, 15px);}
-    to {transform: translate(0, 0px);    }
-}
-@-moz-keyframes clock_float {
-  from {transform:translate(0, 0px);}
-    50% {transform:translate(0, 15px);}
-    to {transform: translate(0, 0px);    }
-}
-@-ms-keyframes clock_float {
-  from {transform:translate(0, 0px);}
-    50% {transform:translate(0, 15px);}
-    to {transform: translate(0, 0px);    }
-}
-@keyframes clock_float {
-  from {transform:translate(0, 0px);}
-    50% {transform:translate(0, 15px);}
-    to {transform: translate(0, 0px);    }
-}
-@-webkit-keyframes clock_shadow {
-  50% { margin: 0px 20% 0px 20%; opacity:.75; }
-  100% { margin: 0px 0px 0px 0px; opacity:1; }
-}
-
 
 button, button:hover, button:focus, button:active, button::-moz-focus-inner {
   outline: 0;
