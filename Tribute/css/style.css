@@ -1,0 +1,54 @@
+body {
+  marin: 0 auto;
+  padding: 0;
+  background-color: #EEE;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  background-color: rgb(175, 225, 225);
+  border: 2px dotted #000;
+  width: 90%;
+}
+
+h1 {
+  margin: 0 auto;
+  margin-top: 25px;
+  text-align: center;
+  font-family: 'Montserrat', san-serif;
+}
+
+p, h2 {
+  text-align: center;
+  font-family: 'Inconsolata';
+}
+
+.main {
+  margin: 0 auto;
+  padding: 0;
+  background-color: #DDD;
+  width: 50%;
+}
+
+.img-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  width: 500px;
+}
+.imgDisplay {
+  margin: 0 auto;
+  height: 250px;
+  width: auto;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  box-shadow: 2px 4px 3px #DEF;
+}
+
+ul{
+  display: block;
+  text-align: center;
+}
+ul li{
+  display: inline-block;
+}
