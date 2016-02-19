@@ -22,12 +22,13 @@ h1 {
 p, h2 {
   text-align: center;
   font-family: 'Inconsolata';
+  text-decoration: underline;
 }
 
 .main {
   margin: 0 auto;
   border-radius: 1em;
-  background-color: #DDD;
+  background-color: #DDE;
   width: 60%;
 }
 
@@ -55,4 +56,5 @@ ul li{
 
 li {
   margin: 4px;
+  font-family: Arial;
 }
