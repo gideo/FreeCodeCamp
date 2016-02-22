@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  height: 250px;
+  width: 250px;
+  background-color: #EEEFEF;
+  border-radius: 1em;
+}
