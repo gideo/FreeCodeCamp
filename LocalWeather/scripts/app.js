@@ -36,10 +36,18 @@ $(document).ready(function() {
       });
       return json;
     })();
-    $("#weatherApi").text(JSON.stringify(json));
+    //$("#weatherApi").text(JSON.stringify(json));
   }
 
-  function requestApi() {
-    var weatherApi = "http://http://api.openweathermap.org/data/2.5/weather?lat="
+  function kelvinToF(num){
+    return ((num-273.15)*9/5)+32;
   }
+
+  function kelvinToC(num){
+    return num-273.15;
+  }
+
+  $("#btnLoc").on("click", function() {
+    $("#location").text(json["name"]);
+  });
 });
