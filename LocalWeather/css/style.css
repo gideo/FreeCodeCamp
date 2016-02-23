@@ -1,6 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
 body {
   margin: 0;
   padding: 0;
+  background: rgba(183,222,237,1);
+  font-size: .9em;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 h1 {
@@ -9,8 +14,30 @@ h1 {
 
 .wrapper {
   margin: 0 auto;
+  display: block;
   height: 250px;
-  width: 250px;
+  width: 450px;
   background-color: #EEEFEF;
+  border: 3px solid #FFF;
   border-radius: 1em;
+}
+
+.buttons{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.disp {
+  margin: 0 auto;
+  height: 50px;
+  width: 120px;
+  background-color: #EFE;
+  border-radius: 1em;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.location {
+  bottom: 25%;
+  transform: translateY(25%);
 }

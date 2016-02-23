@@ -40,14 +40,17 @@ $(document).ready(function() {
   }
 
   function kelvinToF(num){
-    return ((num-273.15)*9/5)+32;
+    return (((num-273.15)*9/5)+32).toFixed(1) + "°F";
   }
 
   function kelvinToC(num){
-    return num-273.15;
+    return (num-273.15).toFixed(1) + "°C";
   }
 
   $("#btnLoc").on("click", function() {
     $("#location").text(json["name"]);
   });
+  $("#btnTemp").on("click", function() {
+    $("#temperature").text(kelvinToF(json["main"]["temp"]))
+  })
 });
