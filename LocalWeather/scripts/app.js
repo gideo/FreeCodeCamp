@@ -10,20 +10,17 @@ $(document).ready(function() {
     } else {
       x.text("Geolocation is not supported by this browser.");
     }
-
+    
   })();
-
+  
   function getPosition(position) {
     longitude = position.coords.longitude;
     latitude = position.coords.latitude
-    $("#long").text("Latitude: " + latitude)
+    $("#long").text("Latitude: " + latitude) 
     $("#lati").text("Longitude: " + longitude);
     weatherApi = "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&appid="+appid;
-
+    
     x.text(weatherApi);
-    // $.getJSON(weatherApi, function (data) {
-    //   console.log(JSON.stringify(data))
-    // });
     json = (function() {
       var json = null;
       $.ajax({
@@ -37,20 +34,27 @@ $(document).ready(function() {
       return json;
     })();
     //$("#weatherApi").text(JSON.stringify(json));
+    $("#location").text(json["name"]);
+    $("#temperature").text(kelvinToF(json["main"]["temp"]))
   }
-
+  
   function kelvinToF(num){
     return (((num-273.15)*9/5)+32).toFixed(1) + "°F";
   }
-
   function kelvinToC(num){
-    return (num-273.15).toFixed(1) + "°C";
+    return ((num-273.15).toFixed(1)) + "°C";
   }
-
+  
   $("#btnLoc").on("click", function() {
     $("#location").text(json["name"]);
   });
-  $("#btnTemp").on("click", function() {
-    $("#temperature").text(kelvinToF(json["main"]["temp"]))
+  
+  $("#switchDeg").on("click", function() {
+    var t = $("#temperature");
+    if(t.text()[t.text().length-1] === "F"){
+      t.text(kelvinToC(json["main"]["temp"]));
+    } else {
+      t.text(kelvinToF(json["main"]["temp"]));
+    }
   })
 });
