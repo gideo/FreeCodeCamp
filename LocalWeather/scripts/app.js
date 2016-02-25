@@ -1,7 +1,5 @@
 $(document).ready(function() {
   var x = $("#writeMe");
-  var appid = "3bbd55527ee1ad0e5f326312904163d3";
-  var longitude, latitude, weatherApi;
   var json, temp, location, weather;
   (function(){
     if(navigator.geolocation){
@@ -14,11 +12,13 @@ $(document).ready(function() {
   })();
 
   function getPosition(position) {
-    longitude = position.coords.longitude;
-    latitude = position.coords.latitude
+    var longitude = position.coords.longitude;
+    var latitude = position.coords.latitude;
+    var appid = "3bbd55527ee1ad0e5f326312904163d3";
+
     $("#long").text("Latitude: " + latitude)
     $("#lati").text("Longitude: " + longitude);
-    weatherApi = "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&appid="+appid;
+    var weatherApi = "http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&appid="+appid;
 
     x.text(weatherApi);
     json = (function() {
