@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>WeatherLite</title>
-	<script type="text/javascript" src="./css/style.css"></script>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 </head>
@@ -11,8 +12,11 @@
 	<h1>WeatherLite</h1>
     <div class="wrapper">
       <div class="disp">
-        <span id="location"></span>
-        <span id="temperature"></span>
+        <div id="location"></div>
+        <div id="temperature"></div>
+      </div>
+      <div>
+        <i class="wi wi-night-sleet"></i>
       </div>
       <div id="writeMe"></div>
       <div id="long"></div>
@@ -20,8 +24,8 @@
       <div id="weatherApi"></div>
     </div>
     <div class="buttons">
-      <button id="btnLoc">Place</button>
-      <button id="btnTemp">Temperature</button>
+      <button id="switchDeg">Temperature</button>
     </div>
+    <script type="text/javascript" src="./scripts/app.js"></script>
 </body>
 </html>

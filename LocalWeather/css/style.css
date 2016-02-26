@@ -4,22 +4,24 @@ body {
   margin: 0;
   padding: 0;
   background: rgba(183,222,237,1);
-  font-size: .9em;
+  font-size: 1.5em;
   font-family: "Roboto Condensed", sans-serif;
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 1em;
 }
 
 .wrapper {
   margin: 0 auto;
   display: block;
   height: 250px;
-  width: 450px;
+  width: 350px;
   background-color: #EEEFEF;
   border: 3px solid #FFF;
   border-radius: 1em;
+  text-align: center;
 }
 
 .buttons{
@@ -29,7 +31,7 @@ h1 {
 
 .disp {
   margin: 0 auto;
-  height: 50px;
+  height: 40px;
   width: 120px;
   background-color: #EFE;
   border-radius: 1em;
