@@ -43,3 +43,7 @@ h1 {
   bottom: 25%;
   transform: translateY(25%);
 }
+
+#temperature {
+  color: blue;
+}
