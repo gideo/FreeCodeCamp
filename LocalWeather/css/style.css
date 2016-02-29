@@ -3,7 +3,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: rgba(183,222,237,1);
+  background-image: url("https://www.dropbox.com/s/11j0ftz9v1phfbl/photo-1451337516015-6b6e9a44a8a3.jpg?dl=1");
+  background-size: cover;
   font-size: 1.5em;
   font-family: "Roboto Condensed", sans-serif;
 }
@@ -26,7 +27,7 @@ h1 {
 
 .tester {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 40px;
   display: block;
   height: 150px;
   width: 250px;
@@ -45,8 +46,9 @@ h1 {
   margin: 0 auto;
   height: 20px;
   width: 120px;
-  background-color: #EFE;
+  background-color: #EFF;
   border-radius: 1em;
+  border: 2px solid #fff;
   text-align: center;
   transform: translateY(-50%);
 }
@@ -62,8 +64,13 @@ h1 {
 #weatherIcon {
   background: #fff;
   position: relative;
-  top: -75px;
-  right: -115px;
-  border-radius: 1em;
+  right: -45px;
+  border-radius: 50%;
   width: 40%;
+}
+
+.disable-selection {
+     -moz-user-select: none;
+      -ms-user-select: none;
+  -webkit-user-select: none;
 }
