@@ -16,8 +16,20 @@ h1 {
 .wrapper {
   margin: 0 auto;
   display: block;
-  height: 250px;
-  width: 350px;
+  height: 70px;
+  width: 150px;
+  background-color: #EEEFEF;
+  border: 3px solid #FFF;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.tester {
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  height: 150px;
+  width: 250px;
   background-color: #EEEFEF;
   border: 3px solid #FFF;
   border-radius: 1em;
@@ -31,7 +43,7 @@ h1 {
 
 .disp {
   margin: 0 auto;
-  height: 40px;
+  height: 20px;
   width: 120px;
   background-color: #EFE;
   border-radius: 1em;
@@ -39,11 +51,19 @@ h1 {
   transform: translateY(-50%);
 }
 
-.location {
-  bottom: 25%;
-  transform: translateY(25%);
-}
-
 #temperature {
   color: blue;
+}
+
+.icons {
+  font-size: 50px;
+}
+
+#weatherIcon {
+  background: #fff;
+  position: relative;
+  top: -75px;
+  right: -115px;
+  border-radius: 1em;
+  width: 40%;
 }
