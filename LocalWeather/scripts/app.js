@@ -11,6 +11,20 @@ $(document).ready(function() {
     
   })();
   
+  //Get location name
+  function setLocation(json) {
+    $("#location").text(json.name);
+  }
+  
+  //Temperature Conversion
+  $("#temperature").on("click", function() {
+    var t = $("#temperature"), d = json.main.temp;
+    var len = t.text().length-1;
+    t.text()[len] === "F" ? t.text(kelvinToC(d)) :
+                                          t.text(kelvinToF(d));
+  });
+  
+  //Get user location and request weathe data
   function getPosition(position) {
     var longitude = position.coords.longitude;
     var latitude = position.coords.latitude;
@@ -35,10 +49,10 @@ $(document).ready(function() {
     })();
     
     temp = json["main"]["temp"];
-    location = json["name"];
     weather = json["weather"][0]["main"];
     
-    $("#location").text(location);
+    //$("#location").text(location);
+    setLocation(json);
     $("#temperature").text(kelvinToF(temp));
   }
   
@@ -49,16 +63,5 @@ $(document).ready(function() {
     return ((num-273.15).toFixed(1)) + "°C";
   }
   
-  $("#btnLoc").on("click", function() {
-    $("#location").text(json["name"]);
-  });
   
-  $("#temperature").on("click", function() {
-    var t = $("#temperature");
-    if(t.text()[t.text().length-1] === "F"){
-      t.text(kelvinToC(json["main"]["temp"]));
-    } else {
-      t.text(kelvinToF(json["main"]["temp"]));
-    }
-  })
 });
