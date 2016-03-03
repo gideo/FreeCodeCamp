@@ -1,14 +1,14 @@
 $(document).ready(function() {
   var x = $("#writeMe");
   var json, temp, location, weather;
+  
   (function(){
     if(navigator.geolocation){
       x.text("Geolocation pending!");
       navigator.geolocation.getCurrentPosition(getPosition);
     } else {
       x.text("Geolocation is not supported by this browser.");
-    }
-    
+    }    
   })();
   
   //Get location name
@@ -20,9 +20,47 @@ $(document).ready(function() {
   $("#temperature").on("click", function() {
     var t = $("#temperature"), d = json.main.temp;
     var len = t.text().length-1;
-    t.text()[len] === "F" ? t.text(kelvinToC(d)) :
-                                          t.text(kelvinToF(d));
+    t.text()[len] === "F" ? t.text(kelvinToC(d)) : t.text(kelvinToF(d));
   });
+  
+  function kelvinToF(num){
+    return (((num-273.15)*9/5)+32).toFixed(1) + "°F";
+  }
+  function kelvinToC(num){
+    return ((num-273.15).toFixed(1)) + "°C";
+  }
+  
+  //set icons
+  function setIcon(json) {
+    var weather = json.weather[0].id;
+    var icon = "wi-day-sunny";
+    //wi-night-sleet-storm
+    console.log(weather);
+    switch(true) {
+      case (weather >= 200 && weather <= 299):
+        icon = "wi-thunderstorm";
+        break;
+      case (weather >= 300 && weather <= 399):
+        icon = "wi-raindrops";
+        break;
+      case (weather >= 500 && weather <= 599):
+        icon = "wi-rain";
+        break;
+      case (weather >= 700 && weather <= 799):
+        icon = "wi-fog";
+        break;
+      case (weather == 800):
+        icon = "wi-day-sunny";
+        break;
+      case (weather >= 800 && weather <= 899):
+        icon = "wi-cloudy";
+        break;
+      default:
+        icon = "wi-night-sleet-storm";
+    }
+    
+    $("#weatherIcon").append('<i class="icons wi ' + icon + '"></i>');
+  }
   
   //Get user location and request weathe data
   function getPosition(position) {
@@ -48,20 +86,9 @@ $(document).ready(function() {
       return json;
     })();
     
-    temp = json["main"]["temp"];
-    weather = json["weather"][0]["main"];
-    
-    //$("#location").text(location);
+    var temp = json.main.temp;
     setLocation(json);
-    $("#temperature").text(kelvinToF(temp));
-  }
-  
-  function kelvinToF(num){
-    return (((num-273.15)*9/5)+32).toFixed(1) + "°F";
-  }
-  function kelvinToC(num){
-    return ((num-273.15).toFixed(1)) + "°C";
-  }
-  
-  
+    setIcon(json);
+    $("#temperature").text(kelvinToF(temp));    
+  }  
 });
