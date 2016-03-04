@@ -2,14 +2,6 @@ $(document).ready(function() {
   var x = $("#writeMe");
   var json, temp, location, weather;
 
-  (function(){
-    if(navigator.geolocation){
-      x.text("Geolocation pending!");
-      navigator.geolocation.getCurrentPosition(getPosition);
-    } else {
-      x.text("Geolocation is not supported by this browser.");
-    }
-  })();
 
   //Get location name
   function setLocation(json) {
@@ -79,9 +71,9 @@ $(document).ready(function() {
     json = (function() {
       var json = null;
       $.ajax({
-        'async': false;
-        'global': false;
-        'url': weatherApi;
+        'async': false,
+        'global': false,
+        'url': weatherApi,
         'success': function(data) {
           json = data;
         }
@@ -94,4 +86,14 @@ $(document).ready(function() {
     setIcon(json);
     $("#temperature").text(kelvinToF(temp));
   }
+
+  //initialize weather condition
+  (function(){
+    if(navigator.geolocation){
+      x.text("Geolocation pending!");
+      navigator.geolocation.getCurrentPosition(getPosition);
+    } else {
+      x.text("Geolocation is not supported by this browser.");
+    }
+  })();
 });
