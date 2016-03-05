@@ -1,0 +1,24 @@
+body,
+h1,
+h2 {
+  font-family:"Helvetica", "Arial", "sans-serif";
+  font-weight: 400;
+}
+
+p,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gothic", "sans-serif";
+  font-weight: 100;
+}
+
+.btn:hover {
+    background-color: #D5E9EF;
+} 
+
+.btn {
+  width: 200px;
+  margin: 0px 10px 0px 0px;
+}
