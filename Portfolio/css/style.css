@@ -5,6 +5,12 @@ h2 {
   font-weight: 400;
 }
 
+body {
+  background: url("https://www.dropbox.com/s/xv97qzqdu1boqyp/1F1FJm4.png?dl=1");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 p,
 h3,
 h4,
@@ -28,6 +34,7 @@ h6 {
 }
 
 .portfolio-border {
+  margin-left:1em;
   border: 2px solid #012;
   border-radius: 1em;
   box-shadow: 3px 5px 10px #A5A5A9;
