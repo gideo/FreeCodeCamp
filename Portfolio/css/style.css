@@ -46,3 +46,9 @@ a:hover {
   border-radius: 1em;
   box-shadow: 3px 5px 10px #A5A5A9;
 }
+
+.portfolio-border:hover {
+  border: 3px solid #000;
+  background-color: #EEE;
+  box-shadow: 4px 8px 15px #A4A4AA
+}
