@@ -7,7 +7,7 @@ h2 {
 }
 
 body {
-  background: url("https://www.dropbox.com/s/ogzy8psdnrvynig/photo-1453282716202-de94e528067c.png?dl=1");
+  background: url("https://www.dropbox.com/s/xv97qzqdu1boqyp/1F1FJm4.png?dl=1");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -19,10 +19,6 @@ h5,
 h6 {
   font-family: "Gothic", "sans-serif";
   font-weight: 100;
-}
-
-.title:hover {
-  text-shadow: 2px 2px #999;
 }
 
 .btn:hover {
