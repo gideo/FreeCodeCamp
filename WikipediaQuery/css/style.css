@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #726A70;
+}
+
+h2 {
+  text-align: center;
+}
+.search-container {
+  margin: auto;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+.search-form {
+  height: 2em;
+  width: 180px;
+  margin: auto;
+  border: 1px solid #f00;
+}
