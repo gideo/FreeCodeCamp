@@ -1,3 +1,6 @@
 $(document).ready(function() {
-  //alert("Testing!");
+  var query = $("#query")
+  query.on("submit", function() {
+    alert($("#searchInput").val());
+  })
 })
