@@ -18,21 +18,29 @@ h2 {
 
 .result-box {
   margin: auto;
-  text-align: left;
+  padding: .2em;
+  
   width: 500px;
   height: auto;
-  background: #fff;
+  
+  border-radius: .5em;
+  border: 2px solid #47404A;
+  background: #fefefe;
 }
 
 .result-font {
+  text-indent: 4px;
+  text-align: left;
   font-size: 1.2em;
   font-family: Roboto Condensed;
 }
 
 #searchQuery {
+  margin: 1.2em .25em;
+  
   height: 2em;
   width: 180px;
-  margin: 1.2em .25em;
+  
   border: 2px solid #f00;
   border-radius: 5px;
 }
