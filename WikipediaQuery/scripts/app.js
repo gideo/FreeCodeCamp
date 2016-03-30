@@ -6,33 +6,40 @@ $(document).ready(function() {
   var api = "http://en.wikipedia.org/w/api.php?format=json&action=query&titles=";
   var cb = "&prop=revisions&rvprop=content&callback=?";
   var json;
-  
-  query.on("submit", function() {
-    if(!search.val()) {
-      alert("Empty!");
-      return;
-    }
+
+  function emptyResult() {
     result.empty();
+    if(!search.val()) {
+        alert("Empty!");
+    }
+  }
+
+  query.on("submit", function() {
+    emptyResult();
     result.append("<div class='result-box result-font'>"+ search.val() + "</div>")
     $.getJSON(api+search.val()+cb ,function(data) {
       json = data.query.pages;
+      $(".result-box").append("<div class='result-font'>" + JSON.stringify(json, null, 4)
+        + "</div>");
       alert(JSON.stringify(json, null, 4));
     });
   })
-  
-  /*
-  json = (function() {
-      json = null;
-      $.ajax({
-        'async': true,
-        'global': false,
-        'url': api+search.val(),
-        'success': function(data) {
-          alert("sucess");
-          json = data.query.pages;
-        }
-      });
-      return json;
-    })(); 
-  */
+
+
+  //Obslete asynchronous request
+
+  // json = (function() {
+  //     json = null;
+  //     $.ajax({
+  //       'async': true,
+  //       'global': false,
+  //       'url': api+search.val(),
+  //       'success': function(data) {
+  //         alert("sucess");
+  //         json = data.query.pages;
+  //       }
+  //     });
+  //     return json;
+  //   })();
+
 })

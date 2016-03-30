@@ -5,6 +5,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #726A70;
+  background: url("https://www.dropbox.com/s/8537hn4bud02e10/photo-1459331634008-76af2257a705.jpg?dl=1");
+  background-size: cover;
 }
 
 h2 {
@@ -19,10 +21,10 @@ h2 {
 .result-box {
   margin: auto;
   padding: .2em;
-  
+
   width: 500px;
   height: auto;
-  
+
   border-radius: .5em;
   border: 2px solid #47404A;
   background: #fefefe;
@@ -37,11 +39,11 @@ h2 {
 
 #searchQuery {
   margin: 1.2em .25em;
-  
+
   height: 2em;
   width: 180px;
-  
-  border: 2px solid #f00;
+
+  border: 2px solid #26a;
   border-radius: 5px;
 }
 
