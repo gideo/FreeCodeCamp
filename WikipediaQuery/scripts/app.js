@@ -1,3 +1,5 @@
+var app = angular.module('MainApp', ['ngAnimate']);
+
 $(document).ready(function() {
   var query = $("#query");
   var search = $("#searchQuery");
