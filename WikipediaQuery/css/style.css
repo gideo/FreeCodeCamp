@@ -21,10 +21,10 @@ h2 {
 .result-box {
   margin: auto;
   padding: .2em;
-
+  
   width: 500px;
   height: auto;
-
+  
   border-radius: .5em;
   border: 2px solid #47404A;
   background: #fefefe;
@@ -39,10 +39,10 @@ h2 {
 
 #searchQuery {
   margin: 1.2em .25em;
-
+  
   height: 2em;
   width: 180px;
-
+  
   border: 2px solid #26a;
   border-radius: 5px;
 }
