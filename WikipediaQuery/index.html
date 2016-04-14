@@ -6,8 +6,8 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 </head>
-<body>
-	<h2> WikiQuery </h2>
+<body ng-app ng-controller="MainController">
+  <h2> WikiQuery </h2>
   <div class="search-container">
     <form class="search" id="query" action="" onsubmit="return false">
       <input id="searchQuery" type="text" />
@@ -15,11 +15,11 @@
     </form>
   </div>
 
-  <div id="result" class="result-Container"></div>
-    
+  <div id="result" class="result-Container"></div>  
   </div>
   
   <script type="text/javascript" href="./scripts/jquery-2.2.0.min.js"></script>
   <script type="text/javascript" href="./scripts/app.js"></script>
+  <script type="text/javascript" href="./scripts/angular.min.js"></script>
 </body>
 </html>
