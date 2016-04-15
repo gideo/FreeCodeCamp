@@ -1,5 +1,13 @@
 var app = angular.module('MainApp', ['ngAnimate']);
 
+(function() {
+  var app = angular.module('MainApp', ['ngAnimate']);
+
+  app.controller('MainController', function() {
+    this.message = "Testing'"
+  })
+}());
+
 $(document).ready(function() {
   var query = $("#query");
   var search = $("#searchQuery");
