@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
 	<meta charset="utf-8">
 	<title>WikiQuery</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
 </head>
-<body ng-app ng-controller="MainController">
+<body>
   <h2> WikiQuery </h2>
-  <div class="search-container">
+  <div ng-controller="MainController" class="search-container">
     <form class="search" id="query" action="" onsubmit="return false">
       <input id="searchQuery" type="text" />
       <input id="submitBox" type="submit" value="Search"/>

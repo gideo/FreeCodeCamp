@@ -1,5 +1,3 @@
-var app = angular.module('MainApp', ['ngAnimate']);
-
 $(document).ready(function() {
   var query = $("#query");
   var search = $("#searchQuery");
@@ -22,6 +20,7 @@ $(document).ready(function() {
     result.append("<div class='result-box result-font'>"+ query + "</div>")
     $.getJSON(api+query+cb ,function(data) {
     json = data.query.pages;
+    //$(".result-box").append("<div class='result-font'>"+ JSON.stringify(json,null, 4) + "</div>")
     alert(JSON.stringify(json, null, 4));
     });
   })
