@@ -19,11 +19,12 @@ $(document).ready(function() {
       [ "Fyodor Dostoyevsky" , "Much unhappiness has come into the world because of bewilderment and things left unsaid."], 
       [ "Erich Maria Remarque" , "Life did not intend to make us perfect. Whoever is perfect belongs in a museum. "], 
       [ "Franz Kafka" , "Youth is happy because it has the ability to see beauty. Anyone who keeps that ability to see beauty never grows old."], 
-      [ "Jane Austen", "Friendship is certainly the finest balm for the pangs of disappointed love."]
+      [ "Jane Austen", "Friendship is certainly the finest balm for the pangs of disappointed love."],
+      [ "Nelson Mandela", "Education is the most powerful weapon which you can use to change the world." ],
+      [ "Henry Ford" , "Coming together is a beginning, keeping together is progress; working together is success." ]
     ];
     var rand = Math.floor(Math.random() * bartlett.length);
     printSentence("#quote", bartlett[rand][1]);
-    // $("#quote").text('"' + bartlett[rand][1] + '"');
     $("#author").text(bartlett[rand][0]);
     //Append twitter element
     var quote = 'https://twitter.com/intent/tweet?text=' + '"' + bartlett[rand][1] + '" -' + bartlett[rand][0];
@@ -36,7 +37,7 @@ $(document).ready(function() {
     for(var i = 0; i < s.length; i++){
       (function(index) { 
         setTimeout(function() { 
-          $(id).append(s[index] + " "); }, 75 * i);
+          $(id).append(s[index] + " "); }, 115 * i);
       })(i);
     }
   }
